@@ -5,3 +5,4 @@ progress*.json
 matches*.json
 .env
 notes.md
+config.py

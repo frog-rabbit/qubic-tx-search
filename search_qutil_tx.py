@@ -6,32 +6,12 @@ try:
 except ImportError:
     tqdm = None
 
+# Import configuration constants
+from config import START_TICK, END_TICK, TARGET_AMOUNT
 
 # ---------- CONFIG ----------
 ARCHIVER_BASE   = os.environ.get("QUBIC_RPC_URL", "https://rpc.qubic.org")
 EXPLORER_BASE   = os.environ.get("QUBIC_EXPLORER_URL", "https://explorer.qubic.org")
-
-#START_TICK      = int(os.environ.get("START_TICK", 18158326)) # 18174087 18172708
-#END_TICK        = int(os.environ.get("END_TICK",   18178326))
-#TARGET_AMOUNT   = int(os.environ.get("TARGET_AMOUNT", 4_122_871_985))
-
-#START_TICK      = int(os.environ.get("START_TICK", 30947973))
-#END_TICK        = int(os.environ.get("END_TICK",   30947977))
-
-# Target amount to find (integer QUBIC). Example: 1_258_485_318
-#TARGET_AMOUNT   = int(os.environ.get("TARGET_AMOUNT", 1_258_485_318))
-
-#START_TICK      = int(os.environ.get("START_TICK", 18335012))
-#END_TICK        = int(os.environ.get("END_TICK",   18340000))
-#TARGET_AMOUNT   = int(os.environ.get("TARGET_AMOUNT", 7_993_674_515))
-
-# ep144
-START_TICK      = int(os.environ.get("START_TICK", 18481000))
-END_TICK        = int(os.environ.get("END_TICK",   18490000))
-TARGET_AMOUNT   = int(os.environ.get("TARGET_AMOUNT", 11_852_162_771))
-
-#TARGET_AMOUNT   = int(os.environ.get("TARGET_AMOUNT", 4_289_088))
-
 
 # Optional: filter only SC calls to a specific contract (destId). Leave empty to scan all.
 # Example QUTIL destId if you know it: "EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVWRF"
